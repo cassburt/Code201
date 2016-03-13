@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+  <head>
+  <title>Guessing Game</title>
+  </head>
+
+  <body>
+  <h1>Welcome to Code 201&trade;</h1>
+  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUKfzcrpQ1odJOpKjljEp0MuOUCESV-c2v6L1mx02B0YFdShoW" >
+  <p>I hope you have enjoyed my guessing game! Look forward to new and exciting improvements to come!</p>
+  <p>Perhaps I shall spruce it up with some CSS after class. #whoknows</p>
+  <script type="text/javascript">
+    var sampleAnswer1 = "yes";
+    var sampleAnswer2 = "yes";
+    var sampleAnswer3 = "no";
+    var guessCorrect = 0;
+    var username = prompt("First off, what's your name?")
+
+    console.log("Did I once steal a candy bar at the age of 5?");
+    var guess1 = prompt ("Would you believe that I once stole a candy bar at age 5?");
+
+    console.log ("Compare the yes/no response to ours.");
+    if (sampleAnswer1 == guess1) {
+      alert("You guessed correctly, " + username + "!" + " Now you know of my sordid past!");
+      guessCorrect += 1;
+    } else {
+      var guess1 = prompt("You clearly don't know me at all... Let's try again, shall we?");
+      if (guess1 == sampleAnswer1) {
+        alert("Finally!");
+      }
+    }
+
+    console.log("Did I once laugh at a friend that slipped and fell trying to catch the streetcar?");
+    var guess2 = prompt ("Did I once laugh at a friend that slipped and fell trying to catch the streetcar?");
+
+    console.log ("Compare the yes/no response to ours.");
+    if (sampleAnswer2 == guess2) {
+      alert(username + "!" + " 2 for 2, you sly fox!");
+      guessCorrect += 1;
+    } else {
+      var guess2 = prompt("Sigh, I'm becoming disappointed... Try to answer correctly this time!");
+      if (guess2 == sampleAnswer2) {
+        alert("About time.");
+      }
+    }
+
+    console.log("Would I drink my roommate's last beer?");
+    var guess3 = prompt ("Would I drink my roommate's last bear?");
+
+    console.log ("Compare the yes/no response to ours.");
+    if (sampleAnswer3 !== guess3) {
+      alert("What kind of monster do you take me for?! Even I have limits!");
+      var guess3 = prompt("You owe me another try!");
+      if(sampleAnswer3 == guess3) {
+        alert("Some things are just sacred!");
+      }
+    } else {
+      alert("Right? How messed up would that have been?");
+      guessCorrect += 1;
+    }
+
+    conole.log("Comepare to see if initial guesses were correct.");
+    if (guessCorrect == 3) {
+      alert("Congrats, " + username + "! " + "You know the limits of my evilness. 3 for 3!");
+    } else if (guessCorrect == 2) {
+      alert("2 for 3, " + username + ". Not terrible... I suppose.");
+    } else {
+      alert("You clearly know nothing about me. #thatisall");
+    }
+
+
+
+    </script>
+  </body>
+</html>
