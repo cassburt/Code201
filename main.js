@@ -10,12 +10,12 @@ console.log("Did I once steal a candy bar at the age of 5?");
 var guess1 = prompt ("Would you believe that I once stole a candy bar at age 5?");
 
 console.log ("Compare the yes/no response to ours.");
-if (sampleAnswer1 == guess1.toUpperCase()) {
+if (sampleAnswer1 == guess1.toUpperCase() || guess1.toUpperCase() == "Y") {
   alert("You guessed correctly, " + username + "!" + " Now you know of my sordid past!");
   guessCorrect += 1;
 } else {
   var guess1 = prompt("You clearly don't know me at all... Let's try again, shall we?");
-  if (guess1.toUpperCase() == sampleAnswer1) {
+  if (guess1.toUpperCase() == sampleAnswer1 || guess1.toUpperCase() == "Y") {
     alert("Finally!");
   }
 }
@@ -24,12 +24,12 @@ console.log("Did I once laugh at a friend that slipped and fell trying to catch 
 var guess2 = prompt ("Did I once laugh at a friend that slipped and fell trying to catch the streetcar?");
 
 console.log ("Compare the yes/no response to ours.");
-if (sampleAnswer2 == guess2.toUpperCase()) {
-  alert(username + "!" + " 2 for 2, you sly fox!");
+if (sampleAnswer2 == guess2.toUpperCase() || guess2.toUpperCase() == "Y") {
+  alert(username + "!" + "Correct, you sly fox!");
   guessCorrect += 1;
 } else {
   var guess2 = prompt("Sigh, I'm becoming disappointed... Try to answer correctly this time!");
-  if (guess2.toUpperCase() == sampleAnswer2) {
+  if (guess2.toUpperCase() == sampleAnswer2 || guess2.toUpperCase() == "Y") {
     alert("About time.");
   }
 }
@@ -38,10 +38,10 @@ console.log("Would I drink my roommate's last beer?");
 var guess3 = prompt ("Would I drink my roommate's last bear?");
 
 console.log ("Compare the yes/no response to ours.");
-if (sampleAnswer3 !== guess3.toUpperCase()) {
+if (sampleAnswer3 !== guess3.toUpperCase() || guess3.toUpperCase() == "N") {
   alert("What kind of monster do you take me for?! Even I have limits!");
   var guess3 = prompt("You owe me another try!");
-  if(sampleAnswer3 == guess3.toUpperCase()) {
+  if(sampleAnswer3 == guess3.toUpperCase() || guess3.toUpperCase() == "N") {
     alert("Yup! Beer is sacred!");
   }
 } else {
@@ -78,6 +78,8 @@ if (guessCorrect == 4) {
   alert("3 for 4, " + username + ". Not terrible... I suppose.");
 } else if (guessCorrect == 2) {
   alert("2 for 4, " + username + ". I am less than impresssed.");
+} else if(guessCorrect == 1){
+  alert("1 for 4, " + username + ". You have dishonored me.");
 } else {
-  alert("You got less than one intitially correct; clearly know nothing about me. #thatisall");
+  alert("0 for 4. Much to learn of me, you have!");
 }
