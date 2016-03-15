@@ -83,3 +83,13 @@ if (guessCorrect == 4) {
 } else {
   alert("0 for 4. Much to learn of me, you have!");
 }
+
+console.log("Ask the user to guess the number");
+var guessNumber = parseInt(prompt("Guess what my number is!"));
+while (guessNumber !== sampleAnswer4 || guessNumber !== "5") {
+  guessNumber = parseInt(prompt("Guess what my number is!"));
+  if(guessNumber == sampleAnswer4 || guessNumber == "5;") {
+    alert("You are correct!");
+    break;
+  }
+}
