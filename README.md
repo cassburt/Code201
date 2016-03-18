@@ -10,4 +10,6 @@ Fourth question added that asks user to enter a number 1-10 and based on their i
 
 Added an if/else if condition to log how many questions a user got right overall.
 
-Added a while loop that lets a user guess a number continuously until the user enter the matching one. 
+Added a while loop that lets a user guess a number continuously until the user enter the matching one.
+
+Added
