@@ -7,12 +7,15 @@ var answersShorthand = ["Y", "Y", "N"];
 
 var guessNumber = false;
 
-var myGuessNumber = "6";
-
 var guessCorrect = 0;
 
 var username = prompt("First off, what's your name?")
 
+//creats a random number 1-10
+var randomNumber = Math.floor(Math.random() * 10) + 1
+
+
+//asks user a series of questions and informs them if they are correct or not.
 function guessingGame() {
   for (i=0; i<questions.length;i++) {
     var userAnswer = prompt(questions[i]);
@@ -31,14 +34,15 @@ function guessingGame() {
 }
 guessingGame();
 
+//Asks user to guess 1-10 and tells them if they're higher or lower untill they guess correctly
 while (guessNumber == false) {
   var userNumber = parseInt(prompt("Guess a number 1 through 10."));
 
-  if (userNumber == 6) {
+  if (userNumber == randomNumber) {
     guessNumber = true;
     document.getElementById("highOrLow").innerHTML = "You are correct.";
   }
-  else if (userNumber > 6) {
+  else if (userNumber > randomNumber) {
     document.getElementById("highOrLow").innerHTML = "You guessed too high. Guess again.";
   }
   else {
