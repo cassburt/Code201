@@ -13,3 +13,7 @@ Added an if/else if condition to log how many questions a user got right overall
 Added a while loop that lets a user guess a number continuously until the user enter the matching one.
 
 Added functions to condense code and eliminate repetition. Combined the while loop and the highOrLow if/else loop into one while loop to cut repetition and added a variable that generates a random number to compare user's input to.
+
+Modified the guessing game with arrays and a for loop for more concise, efficient code. 
+
+sean: https://github.com/seanloughran/guessing-game.git
