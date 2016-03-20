@@ -30,7 +30,7 @@ function guessingGame() {
 
   }
 
-  document.getElementById("correctGuess").innerHTML = "You got "+guessCorrect+" questions correct.";
+
 }
 
 
@@ -41,7 +41,9 @@ function guessNum() {
 
     if (userNumber == randomNumber) {
       guessNumber = true;
+      guessCorrect++;
       document.getElementById("highOrLow").innerHTML = "You are correct.";
+      document.getElementById("correctGuess").innerHTML = "You got "+guessCorrect+" questions correct total.";
     }
     else if (userNumber > randomNumber) {
       document.getElementById("highOrLow").innerHTML = "You guessed too high. Guess again.";

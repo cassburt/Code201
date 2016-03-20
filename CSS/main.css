@@ -1,5 +1,5 @@
 header {
-  color: red;
+  color: black;
   background-color: gray;
   text-align: center;
   padding-top: 10px;
@@ -8,8 +8,22 @@ header {
 }
 
 #button {
+  width: 50%;
   border: none;
   padding: 20px;
   background-color: red;
+  display: inline;
+}
+
+
+#output {
+  float: right;
+  margin: 0 auto;
+  font-size: 24px;
+  margin-bottom: -20px;
   display: inline-block;
+}
+
+#finalResponse {
+  width: 50%;
 }

@@ -9,19 +9,25 @@
   <body>
 
     <header>
-      <h1>Click below if you dare!!</h1>
+      <h1>CLICK BELOW IF YOU DARE!</h1>
     </header>
 
 
-    <button type="button" id="button" onclick="guessingGame(), guessNum()"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUKfzcrpQ1odJOpKjljEp0MuOUCESV-c2v6L1mx02B0YFdShoW" ></button>
+    <div id="play">
+      <button type="button" id="button" onclick="guessingGame(), guessNum()"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQUKfzcrpQ1odJOpKjljEp0MuOUCESV-c2v6L1mx02B0YFdShoW" ></button>
+    </div>
 
-    <p id="userResponse"></p>
-    <P id="correctGuess"></p>
-    <p id="highOrLow"></p>
+    <div id="output">
+      <p id="userResponse"></p>
+      <p id="highOrLow"></p>
+      <P id="correctGuess"></p>      
+    </div>
 
 
-    <p>I hope you have enjoyed my guessing game! Look forward to new and exciting improvements to come!</p>
-    <p>Perhaps I shall spruce it up with some CSS after class. #whoknows</p>
+    <div id="finalResponse">
+      <p>Thanks for playing! I hope you have enjoyed my guessing game! Look forward to new and exciting improvements to come!</p>
+    </div>
+
 
     <script type="text/javascript" src="main.js"></script>
 
