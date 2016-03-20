@@ -9,7 +9,7 @@ var guessNumber = false;
 
 var guessCorrect = 0;
 
-var username = prompt("First off, what's your name?")
+//var username = prompt("First off, what's your name?")
 
 //creats a random number 1-10
 var randomNumber = Math.floor(Math.random() * 10) + 1
@@ -32,21 +32,22 @@ function guessingGame() {
 
   document.getElementById("correctGuess").innerHTML = "You got "+guessCorrect+" questions correct.";
 }
-guessingGame();
+
 
 //Asks user to guess 1-10 and tells them if they're higher or lower untill they guess correctly
-while (guessNumber == false) {
-  var userNumber = parseInt(prompt("Guess a number 1 through 10."));
+function guessNum() {
+  while (guessNumber == false) {
+    var userNumber = parseInt(prompt("Guess a number 1 through 10."));
 
-  if (userNumber == randomNumber) {
-    guessNumber = true;
-    document.getElementById("highOrLow").innerHTML = "You are correct.";
+    if (userNumber == randomNumber) {
+      guessNumber = true;
+      document.getElementById("highOrLow").innerHTML = "You are correct.";
+    }
+    else if (userNumber > randomNumber) {
+      document.getElementById("highOrLow").innerHTML = "You guessed too high. Guess again.";
+    }
+    else {
+      document.getElementById("highOrLow").innerHTML = "You guessed too low. Guess again.";
+    }
   }
-  else if (userNumber > randomNumber) {
-    document.getElementById("highOrLow").innerHTML = "You guessed too high. Guess again.";
-  }
-  else {
-    document.getElementById("highOrLow").innerHTML = "You guessed too low. Guess again.";
-  }
-
 }
