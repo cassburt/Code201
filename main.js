@@ -3,7 +3,15 @@ var questions = ["Did I once steal a candy bar at the age of 5?", "Did I once la
 
 var answers = ["YES", "YES", "NO", "5"];
 
-var answersShorthand = ["Y", "Y", "N"];
+var img = ["<a href='#'><img src='snickers.png'/></a>"];
+
+
+
+// img[0]= new Image();
+// img[0].src = 'snickers.png';]
+//  "<img src = 'steetcar.jpg'>", "<img src = 'beer.ico'>"];
+
+// var answersShorthand = ["Y", "Y", "N"];
 
 var guessNumber = false;
 
@@ -21,7 +29,7 @@ function guessingGame() {
     var userAnswer = prompt(questions[i]);
 
     if (userAnswer.toUpperCase() == answers[i] || userAnswer.toUpperCase() == answersShorthand[i]) {
-      document.getElementById("userResponse").innerHTML = "You are correct!";
+      document.getElementById("userResponse").innerHTML = img[i] + "You are correct!";
       guessCorrect++;
     }
     else {
@@ -35,7 +43,7 @@ function guessingGame() {
 
 
 //Asks user to guess 1-10 and tells them if they're higher or lower untill they guess correctly
-function guessNum() {
+/*function guessNum() {
   while (guessNumber == false) {
     var userNumber = parseInt(prompt("Guess a number 1 through 10."));
 
@@ -52,4 +60,4 @@ function guessNum() {
       document.getElementById("highOrLow").innerHTML = "You guessed too low. Guess again.";
     }
   }
-}
+}*/
